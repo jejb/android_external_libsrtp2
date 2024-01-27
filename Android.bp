@@ -32,7 +32,7 @@ license {
 cc_library_static {
     host_supported: true,
     // vendor needed for libpreprocessing effects.
-    vendor: true,
+    vendor_available: true,
     name: "libsrtp2",
     srcs: [
         "crypto/cipher/aes.c",
@@ -72,6 +72,7 @@ cc_library_static {
     visibility: [
         "//external/webrtc:__subpackages__",
         "//device/google/cuttlefish/host/frontend/webrtc:__subpackages__",
+        "//frameworks/opt/net/voip/src/jni/rtp:__subpackages__",
     ],
 }
 
